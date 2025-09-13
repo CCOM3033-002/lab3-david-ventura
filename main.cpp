@@ -39,29 +39,33 @@ int main() {
    int menor = randomnum3;
 
     // Hacer codigo para que salgan en orden descendiente
-    if ( mayor > randomnum2)  // Si num1 es mayor que el num2 se queda como el mayor
-        randomnum2 = medio;
-        if (mayor < randomnum2)
-        randomnum1 = medio;                                  
-    
-    else ( medio > randomnum3) // Si num2 es mayor pues se convierte en mayor
-        randomnum3 = menor;
-        if (medio < randomnum3) 
-            randomnum3 = medio;
-
-    else (randomnum3 > randomnum1) {// Si num2 es mayor, num3 es menor 
-        randomnum3 = mayor;
-        randomnum1 = menor;}
-        if ( randomnum3 < randomnum1 ) {
-            randomnum1 = mayor;
-            randomnum3 = menor;
-        }
-    
-     
-          
+    if ( mayor > randomnum2) {  // Ver si num1 es mayor que el num2 
+        mayor = randomnum1      // Si num1 es mayor, se guarda en la variable mayor
         
-        cout << "Orden descendiente: " << mayor << ", " << medio << ", " << menor << endl;
-    return 0;
-}
+        else (mayor < randomnum2)  // Ver si num2 es mayor que el num1
+        mayor = randomnum2  }   // Si num2 es mayor, se guarda en la variable mayor
+    
+    
+        // Este bloque es para verificar cual es mas grande entre el num1 y num2 para ver si es mayor. 
+    
+   /* else if ( mayor > randomnum3) { // Ver si num1 es mayor que el num3 
+        mayor = randomnum1;      // Si num1 es mayor, se guarda en la variable mayor
+        else (mayor < randomnum3)  // Ver si num3 es mayor que el num1
+        mayor = randomnum3;         // Guardar en variable que num3 es mayor pq es mayor que num 1
+
+    }
+    
+    else if (randomnum2 > randomnum3) {     // Ver si el num2 es mayor que num3
+        medio = randomnum2;                  // Si num2 es mayor que num3 se le asigna a la variable medio
+        menor = randomnum3; 
+        else ( randomnum2 < randomnum3 ) 
+        medio = randomnum3;
+        menor = randomnum2;
+    } 
+        
+        
+    cout << "Orden descendiente: " << mayor << ", " << medio << ", " << menor << endl; */
+    return 0; } 
+
 
 

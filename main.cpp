@@ -47,9 +47,9 @@ int main() {
         mayor = randomnum1;      // Si num1 es mayor, se guarda en la variable mayor
         medio = randomnum2;      // Num 2 se guarda en la variable medio
         menor = randomnum3;
-       
-        if ( mayor < randomnum2 )  // Ver si num2 es mayor que el num1
-       
+       }
+    else if ( mayor < randomnum2 )  // Ver si num2 es mayor que el num1
+      { 
         mayor = randomnum2;    // Si num2 es mayor, se guarda en la variable mayor
         medio = randomnum1;    // Num1 se guarda en variable medio
         menor = randomnum3;
@@ -57,20 +57,52 @@ int main() {
 
 //Verificar si num1 es mayor o menor que num3
 
-    else if ( mayor < randomnum3 )   // Ver si num1 es mayor que el num3 
+    else if ( mayor > randomnum3 )   // Ver si num1 es mayor que el num3 
+       {
+        mayor = randomnum1;      // Si num3 es mayor, se guarda en la variable mayor
+        medio = randomnum3;
+        menor = randomnum2;
+       }
+
+       else if ( mayor < randomnum3 )   // Ver si num1 es mayor que el num3 
        {
         mayor = randomnum3;      // Si num3 es mayor, se guarda en la variable mayor
-       
+        medio = randomnum1;
+        menor = randomnum2;
        }
 
 // Ya conseguimos el numero mayor, ahora toca ver cual será el medio y menor
 
- if ( medio < menor)  // Ver si es mayor que el num3 
+    if ( medio < menor)  // Ver si es mayor que el num3 
        {
-               int tmp = medio;
-               medio = menor;
-               menor = medio;
-    } 
+        int tmp;      
+       tmp = medio;
+       medio = menor;
+       menor = tmp;
+    }
+
+   /* else if ( medio <= randomnum2)  // Ver si es mayor que el num3 
+       {
+       int tmp;      
+       tmp = medio;
+       medio = menor;
+       menor = tmp;;
+    }
+
+    else if ( medio <= randomnum1)  // Ver si es mayor que el num3 
+       {
+       int tmp;      
+       tmp = medio;
+       medio = menor;
+       menor = tmp;
+    } */
+
+
+
+
+
+
+
 
 
        

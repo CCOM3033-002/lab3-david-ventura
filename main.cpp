@@ -3,8 +3,7 @@ Lab 3: Tres Numeros Aleatorios
 Nombre: David Ventura
 Núm. Est: 801-24-6367
 Colaboraciones: 
-- 
--
+- Gabriel Santiago
 */
 
 // Incluir las librerias
@@ -42,100 +41,47 @@ int main() {
     //Primero buscamos cual es el numero mayor
 
 //Verificar si num 1 es mayor que num 2
-    if ( mayor > randomnum2 )   // Ver si num1 es mayor que el num2 
-       {
-        mayor = randomnum1;      // Si num1 es mayor, se guarda en la variable mayor
-        medio = randomnum2;      // Num 2 se guarda en la variable medio
-        menor = randomnum3;
-       }
-    else if ( mayor < randomnum2 )  // Ver si num2 es mayor que el num1
+    if ( mayor < randomnum2 )  // Ver si num1 es mayor que el num2
       { 
         mayor = randomnum2;    // Si num2 es mayor, se guarda en la variable mayor
         medio = randomnum1;    // Num1 se guarda en variable medio
-        menor = randomnum3;
+        menor = randomnum3;     //Num3 se guarda en menor
+
+        if ( randomnum2 > randomnum3 )   // Si el num2 es mayor, verificar si num2 es mayor que el num3  
+       {
+        mayor = randomnum2; }      // Si num2 es mayor, se guarda en la variable mayor
+        
+            if (randomnum3 > randomnum1) { //Si num3 es mayor, pues es mayor
+        
+            mayor = randomnum3;      // Num 3 se guarda en la variable medio
+            menor = randomnum1; } 
+
     }
 
 //Verificar si num1 es mayor o menor que num3
 
-    else if ( mayor > randomnum3 )   // Ver si num1 es mayor que el num3 
-       {
-        mayor = randomnum1;      // Si num3 es mayor, se guarda en la variable mayor
-        medio = randomnum3;
-        menor = randomnum2;
-       }
+    else if ( mayor < randomnum3 ){   // Ver si num3 es mayor que el num1
+       
+        mayor = randomnum3;      // Num3 es mayor
+       
 
-       else if ( mayor < randomnum3 )   // Ver si num1 es mayor que el num3 
-       {
-        mayor = randomnum3;      // Si num3 es mayor, se guarda en la variable mayor
-        medio = randomnum1;
-        menor = randomnum2;
+            if  ( mayor < randomnum3 ) {  // Si num1 es mayor que el num3 
+            
+            mayor = randomnum1;      // Num1 es mayor
+            medio = randomnum1;
+            menor = randomnum2; }
        }
 
 // Ya conseguimos el numero mayor, ahora toca ver cual será el medio y menor
 
-    if ( medio < menor)  // Ver si es mayor que el num3 
-       {
-        int tmp;      
-       tmp = medio;
-       medio = menor;
-       menor = tmp;
-    }
-
-   /* else if ( medio <= randomnum2)  // Ver si es mayor que el num3 
-       {
-       int tmp;      
-       tmp = medio;
-       medio = menor;
-       menor = tmp;;
-    }
-
-    else if ( medio <= randomnum1)  // Ver si es mayor que el num3 
-       {
-       int tmp;      
-       tmp = medio;
-       medio = menor;
-       menor = tmp;
-    } */
-
-
-
-
-
-
-
-
-
+    else ( medio < menor) {  // Si el medio es menor que medio 
        
-       
-
-    // Este bloque es para verificar cual es mas medio y menor. 
-
-
-   /* else if ( medio > randomnum3)  // Ver si es mayor que el num3 
-       {
-        mayor = randomnum1;      // Si num1 es mayor, se guarda en la variable mayor
-       
-       if (mayor <= randomnum3)  // Ver si num3 es mayor que el num1
-        
-        mayor = randomnum3;         // Guardar en variable que num3 es mayor pq es mayor que num 1
-
-    } 
-    
-    else if (randomnum2 > randomnum3)      // Ver si el num2 es mayor que num3
-     
-    {
-        medio = randomnum2;                  // Si num2 es mayor que num3 se le asigna a la variable medio
-        menor = randomnum3; 
-    }
-       else if ( randomnum2 < randomnum3 ) 
-    
-       {
-        medio = randomnum3;
-        menor = randomnum2;
-        }
-    */
-        
-        
+        int tmp;      // Crear variable temporal
+       tmp = medio;     // Guardar valor de medio en la variable temporal para que medio este vacia
+       medio = menor;   // Asignar valor de menor en la variable vacia medio
+       menor = tmp;     // Asignar valor temporal dentro de variable  menor
+    }      
+    // Desplegar Resultados
     cout << "Orden descendiente: " << mayor << ", " << medio << ", " << menor << endl; 
     
     return 0; 

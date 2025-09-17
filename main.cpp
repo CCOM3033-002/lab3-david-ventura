@@ -40,8 +40,8 @@ int main() {
     // Hacer codigo para que salgan en orden descendiente
     //Primero buscamos cual es el numero mayor
 
-    //Verificar si num 1 es mayor que num 2
-    if ( mayor < randomnum2 ){  // Ver si num1 es mayor que el num2
+    //Verificar si num 1 es el mayor
+    if ( mayor < randomnum2 ){  // Ver si num1 es menor que el num2
        
         mayor = randomnum2;    // Si num2 es mayor, se guarda en la variable mayor
         medio = randomnum1;    // Num1 se guarda en variable medio
@@ -52,31 +52,25 @@ int main() {
         
         else { 
             //Si num3 es mayor, pues es mayor
-            mayor = randomnum3;      // Num 3 se guarda en la variable medio
+            mayor = randomnum3;      // Num 3 se guarda en la variable mayor
             menor = randomnum1; 
             medio = randomnum2;
         } 
     }
 
 
-    //Verificar si num1 es mayor o menor que num3
+    //Si num1 es mayor que num2, hay que verificar es mayor o menor que num3
 
     else if ( mayor < randomnum3 ) {  // Ver si num3 es mayor que el num1
-        mayor = randomnum3;
+        mayor = randomnum3; // Num3 se guarda en variable mayor
         medio = randomnum1;
-        menor = randomnum2;       // Num3 es mayor
-       
-
-            // if  ( mayor < randomnum3 ) {  // Si num1 es mayor que el num3 
-            // mayor = randomnum1;      // Num1 es mayor
-            // medio = randomnum1;
-            // menor = randomnum2; }
+        menor = randomnum2;             
         }
 
     // Ya conseguimos el numero mayor, ahora toca ver cual será el medio y menor
 
-    else { 
-        medio = randomnum2;
+    else {                      // Si num1 es mayor que num2 y num3, y num2 es mayor que num3
+        medio = randomnum2;     //(Este orden es el que se asume y declara al principio)
         menor = randomnum3;
     }
 

@@ -69,13 +69,14 @@ int main() {
 
 // Ya conseguimos el numero mayor, ahora toca ver cual será el medio y menor
 
-    else ( medio < menor) {  // Si el medio es menor que medio 
+    else { 
+        if ( medio < menor){   // Si el medio es menor que medio 
        
         int tmp;      // Crear variable temporal
        tmp = medio;     // Guardar valor de medio en la variable temporal para que medio este vacia
        medio = menor;   // Asignar valor de menor en la variable vacia medio
-       menor = tmp;     // Asignar valor temporal dentro de variable  menor
-    }      
+       menor = tmp; } }   // Asignar valor temporal dentro de variable  menor
+          
     // Desplegar Resultados
     cout << "Orden descendiente: " << mayor << ", " << medio << ", " << menor << endl; 
     
